@@ -3,7 +3,6 @@
     public class Tree
     {
         public TreeNode Root;
-        Random rnd = new Random();
 
         public void Add(int key, int value)
         {

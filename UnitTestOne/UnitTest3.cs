@@ -173,5 +173,60 @@ namespace UnitTestOne
             Assert.IsTrue(a.Contains(899));
         }
 
+
+        [TestMethod]
+        public void TestRemove6()
+        {
+            List<int> list = new List<int>() { 15, 35, 39, 81, 85, 121, 136, 149, 166, 237, 252, 313, 337, 349, 350, 400, 418, 452, 
+                483, 517, 528, 621, 635, 646, 683, 735, 754, 756, 789, 806, 844, 847, 862, 877, 880, 895, 902, 953, 959, 981 };
+            List<TreeNode> nodes = Util.GetTreeNodes(list);
+
+            // Keys: 15 39 85 136 166 252 337 350 418 483 528 635 683 754 789 844 862 880 902 959 
+
+            foreach (var node in nodes)
+            {
+                Console.Write("{0} ", node.Key);
+            }
+
+            // Add the list to a tree.
+            Tree a = new Tree();
+            a.Root = a.BuildTree(nodes, 0, 19);
+
+            Assert.AreEqual(nodes.Count, a.Count());
+            Assert.AreEqual(nodes.Count, list.Count / 2);
+
+            a.Remove(15);
+            a.Remove(959);
+            a.Remove(85);
+            a.Remove(844);
+            a.Remove(418);
+            a.Remove(528);
+
+            Assert.IsFalse(a.Contains(1));
+            Assert.IsFalse(a.Contains(2));
+            Assert.IsFalse(a.Contains(3));
+            Assert.IsFalse(a.Contains(15));
+            Assert.IsFalse(a.Contains(959));
+            Assert.IsFalse(a.Contains(85));
+            Assert.IsFalse(a.Contains(844));
+            Assert.IsFalse(a.Contains(418));
+            Assert.IsFalse(a.Contains(528));
+
+            Assert.IsTrue(a.Contains(39));
+            Assert.IsTrue(a.Contains(136));
+            Assert.IsTrue(a.Contains(166));
+            Assert.IsTrue(a.Contains(252));
+            Assert.IsTrue(a.Contains(337));
+            Assert.IsTrue(a.Contains(350));
+            Assert.IsTrue(a.Contains(483));
+            Assert.IsTrue(a.Contains(635));
+            Assert.IsTrue(a.Contains(754));
+            Assert.IsTrue(a.Contains(789));
+            Assert.IsTrue(a.Contains(862));
+            Assert.IsTrue(a.Contains(880));
+            Assert.IsTrue(a.Contains(902));
+        }
+
+
     }
 }
