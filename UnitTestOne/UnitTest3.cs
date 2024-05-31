@@ -21,6 +21,8 @@ namespace UnitTestOne
             a.Remove(892);
             a.Remove(382);
 
+            Assert.AreEqual(8, a.Count());
+
             Assert.IsFalse(a.Contains(892));
             Assert.IsFalse(a.Contains(382));
 
@@ -49,6 +51,8 @@ namespace UnitTestOne
             Assert.AreEqual(list.Count, a.Count());
             a.Remove(772);
             a.Remove(557);
+
+            Assert.AreEqual(8, a.Count());
 
             Assert.IsFalse(a.Contains(772));
             Assert.IsFalse(a.Contains(557));
@@ -79,6 +83,8 @@ namespace UnitTestOne
             Assert.AreEqual(list.Count, a.Count());
             a.Remove(217);
             a.Remove(178);
+
+            Assert.AreEqual(8, a.Count());
 
             Assert.IsFalse(a.Contains(217));
             Assert.IsFalse(a.Contains(178));
@@ -119,6 +125,8 @@ namespace UnitTestOne
             a.Remove(442);
             a.Remove(624);
 
+            Assert.AreEqual(7, a.Count());
+
             Assert.IsFalse(a.Contains(280));
             Assert.IsFalse(a.Contains(288));
             Assert.IsFalse(a.Contains(442));
@@ -158,6 +166,8 @@ namespace UnitTestOne
             a.Remove(3);
             a.Remove(240);
             a.Remove(638);
+
+            Assert.AreEqual(7, a.Count());
 
             Assert.IsFalse(a.Contains(1));
             Assert.IsFalse(a.Contains(3));
@@ -201,6 +211,8 @@ namespace UnitTestOne
             a.Remove(844);
             a.Remove(418);
             a.Remove(528);
+
+            Assert.AreEqual(14, a.Count());
 
             Assert.IsFalse(a.Contains(1));
             Assert.IsFalse(a.Contains(2));

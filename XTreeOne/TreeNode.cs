@@ -135,12 +135,10 @@
             {
                 return 0;
             }
-            if (node.IsLeaf())
+            else
             {
-                return 1;
+                return Count(node.Left) + Count(node.Right) + 1;
             }
-
-            return 1 + Count(node.Left) + Count(node.Right);
         }
 
         public List<TreeNode> GetList(List<TreeNode> myList)
