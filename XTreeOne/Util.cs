@@ -3,14 +3,9 @@ namespace XTreeOne
 {
     public static class Util
     {
-        public static List<TreeNode> GetTreeNodes(List<int> a)
+        public static void Add(this List<TreeNode> list, int key, int value) 
         {
-            List<TreeNode> list = new List<TreeNode>();
-            for (int i = 0; i < a.Count; i += 2)
-            {
-                list.Add(new TreeNode(a[i], a[i + 1]));
-            }
-            return list;
+            list.Add(new TreeNode(key, value));
         }
 
     }

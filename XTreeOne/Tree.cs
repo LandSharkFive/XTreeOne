@@ -16,6 +16,14 @@
             }
         }
 
+        public void AddRange(List<TreeNode> list)
+        {
+            foreach (var item in list)
+            {
+                Add(item.Key, item.Value);
+            }
+        }
+
         public void Print()
         {
             if (Root == null)
