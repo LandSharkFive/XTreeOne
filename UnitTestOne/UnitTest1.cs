@@ -83,7 +83,7 @@ namespace UnitTestOne
             for (int i = 0; i < myList.Count; i++)
             {
                 int key = myList[i].Key;
-                Assert.AreEqual(true, a.Contains(key));
+                Assert.IsTrue(a.Contains(key));
             }
 
         }
